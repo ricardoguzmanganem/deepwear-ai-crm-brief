@@ -129,15 +129,7 @@ function updateAll(){
 
 updateAll();
 
-(async function loadOperatingModel(){
-  const img = document.getElementById('operatingModelImage');
-  if (!img) return;
-  try {
-    const response = await fetch('operating-model.b64', {cache: 'force-cache'});
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = (await response.text()).trim();
-    img.src = 'data:image/webp;base64,' + data;
-  } catch (error) {
-    console.error('Operating model failed to load:', error);
-  }
+(function loadOperatingModel(){
+  const img=document.getElementById('operatingModelImage');
+  if(img) img.src='operating-model.svg';
 })();
