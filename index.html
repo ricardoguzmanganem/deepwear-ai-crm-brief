@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>DeepWear • AI & CRM Automation Brief</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<main>
+
+<header>
+ <div class="kicker">DeepWear • AI & CRM Automation brief</div>
+ <h1>Automate the routine first. Earn AI autonomy later.</h1>
+ <p>The opportunity is simple: release sales capacity with workflows first, add AI assistance next, and expand autonomy only when the evidence says it is safe.</p>
+</header>
+
+<section id="proposal" class="section">
+ <div class="tag">1 • Three-stage proposal</div>
+ <h2>Value rises in stages. Control is preserved by design.</h2>
+
+ <div class="stage-flow">
+ <div class="stage-box s1">
+ <div class="n">Stage 1 • Workflow-first</div>
+ <h3>Automate deterministic routine</h3>
+ <ul>
+ <li>CRM updates, owners, tasks, reminders</li>
+ <li>Approved fixed messages / brochures / info requests</li>
+ <li>No auto-send to suspicious or unverifiable senders</li>
+ </ul>
+ </div>
+ <div class="arrow">→</div>
+ <div class="stage-box s2">
+ <div class="n">Stage 2 • AI-assisted</div>
+ <h3>AI prepares; humans still communicate</h3>
+ <ul>
+ <li>Parse messages into CRM fields</li>
+ <li>Summarize conversations</li>
+ <li>Research company/person and draft replies</li>
+ </ul>
+ </div>
+ <div class="arrow">→</div>
+ <div class="stage-box s3">
+ <div class="n">Stage 3 • Selective autonomy</div>
+ <h3>Automate only proven narrow cases</h3>
+ <ul>
+ <li>Routine + clear → AI handling</li>
+ <li>Unsure / suspicious → review</li>
+ <li>Clearly valuable → human sales</li>
+ </ul>
+ </div>
+ </div>
+</section>
+<section id="economics" class="section">
+ <div class="tag">2 • Economic case</div>
+ <h2>Three levels, one comparison</h2>
+
+ <div class="controls">
+ <div class="control"><label><span>Sales staff</span><strong id="staffLabel">7</strong></label><input id="staff" type="range" min="1" max="30" value="7"></div>
+ <div class="control"><label><span>Average monthly salary</span><strong id="salaryLabel">€1,500</strong></label><input id="salary" type="range" min="700" max="5000" step="100" value="1500"></div>
+ <div class="control"><label><span>Time spent on repetitive work</span><strong id="routineLabel">50%</strong></label><input id="routinePct" type="range" min="10" max="90" value="50"></div>
+ <div class="control"><label><span>Monthly communications</span><strong id="commLabel">1,500</strong></label><input id="comms" type="range" min="100" max="5000" step="100" value="1500"></div>
+ </div>
+
+ <div class="metric-row">
+ <div class="metric"><div class="tag">Payroll</div><div class="v" id="payrollOut">€10,500</div><div class="l" id="payrollLegend">7 people × €1,500</div></div>
+ <div class="metric"><div class="tag">Routine capacity</div><div class="v" id="routineOut">€5,250</div><div class="l" id="routineLegend">50% of monthly payroll</div></div>
+ <div class="metric"><div class="tag">Annual routine capacity</div><div class="v" id="annualRoutineOut">€63,000</div><div class="l" id="annualRoutineLegend">12 × monthly routine capacity</div></div>
+ </div>
+
+ <div class="chart-wrap">
+ <svg id="econChart" viewBox="0 0 700 325" width="100%" height="290" role="img" aria-label="Economic scenario comparison">
+ <text x="18" y="24" fill="#fff" font-size="16" font-weight="700">Monthly comparison</text>
+ <text x="18" y="43" fill="#aebbd8" font-size="10">Released capacity vs. incremental HubSpot cost vs. net gain</text>
+
+ <line x1="80" y1="270" x2="670" y2="270" stroke="#425477" stroke-width="1"/>
+ <line x1="80" y1="65" x2="80" y2="270" stroke="#425477" stroke-width="1"/>
+
+ <g>
+ <rect id="wfReleasedBar" x="120" y="150" width="34" height="120" rx="5" fill="#78e7ff"/>
+ <rect id="wfCostBar" x="160" y="270" width="34" height="0" rx="5" fill="#ffd166"/>
+ <rect id="wfNetBar" x="200" y="150" width="34" height="120" rx="5" fill="#4de0bf"/>
+ <text x="177" y="292" text-anchor="middle" fill="#dbe7ff" font-size="11">Workflow</text>
+ </g>
+
+ <g>
+ <rect id="assistReleasedBar" x="310" y="100" width="34" height="170" rx="5" fill="#78e7ff"/>
+ <rect id="assistCostBar" x="350" y="245" width="34" height="25" rx="5" fill="#ffd166"/>
+ <rect id="assistNetBar" x="390" y="115" width="34" height="155" rx="5" fill="#4de0bf"/>
+ <text x="367" y="292" text-anchor="middle" fill="#dbe7ff" font-size="11">AI-assisted</text>
+ </g>
+
+ <g>
+ <rect id="selectiveReleasedBar" x="500" y="70" width="34" height="200" rx="5" fill="#78e7ff"/>
+ <rect id="selectiveCostBar" x="540" y="235" width="34" height="35" rx="5" fill="#ffd166"/>
+ <rect id="selectiveNetBar" x="580" y="90" width="34" height="180" rx="5" fill="#4de0bf"/>
+ <text x="557" y="292" text-anchor="middle" fill="#dbe7ff" font-size="11">Selective AI</text>
+ </g>
+
+ <rect x="445" y="18" width="10" height="10" rx="2" fill="#78e7ff"/><text x="461" y="27" fill="#aebbd8" font-size="9">Released</text>
+ <rect x="510" y="18" width="10" height="10" rx="2" fill="#ffd166"/><text x="526" y="27" fill="#aebbd8" font-size="9">New cost</text>
+ <rect x="578" y="18" width="10" height="10" rx="2" fill="#4de0bf"/><text x="594" y="27" fill="#aebbd8" font-size="9">Net gain</text>
+ </svg>
+
+ <div class="metric-row">
+ <div class="metric"><div class="tag">Workflow-first net</div><div class="v" id="wfNet">€1,575</div><div class="l" id="wfNetLegend">30% removed • €0 new monthly cost</div></div>
+ <div class="metric"><div class="tag">AI-assisted net</div><div class="v" id="assistNet">€2,468</div><div class="l" id="assistNetLegend">55% removed • €420 new monthly cost</div></div>
+ <div class="metric"><div class="tag">Selective AI net</div><div class="v" id="selectiveNet">€3,368</div><div class="l" id="selectiveNetLegend">75% removed • €570 new monthly cost</div></div>
+ </div>
+ </div>
+
+ <div class="callout"><strong>Key takeaway:</strong> current HubSpot spend is already sunk. The decision is how much extra value to capture, and how much autonomy to allow, at each stage.</div>
+</section>
+
+<section id="operating-model" class="section">
+ <div class="tag">3 • Operating model</div>
+ <h2>How the system works, end to end</h2>
+
+ <div class="model-wrap">
+ <img src="operating-model.svg" alt="DeepWear AI CRM operating model"/>
+ </div>
+
+ <div class="protection-title">What the routing is designed to protect against</div>
+ <div class="mistakes">
+ <div class="mistake">
+ <div class="tag">Mistake type 1</div>
+ <div class="title">Weak lead reaches sales</div>
+ <p>Mostly wasted time. Safer to tolerate early.</p>
+ </div>
+ <div class="mistake">
+ <div class="tag">Mistake type 2</div>
+ <div class="title">Valuable lead treated as low priority</div>
+ <p>Possible lost opportunity. Minimize aggressively.</p>
+ </div>
+ </div>
+
+ <div class="micro-loop">
+ <div class="micro-node"><strong>Campaigns</strong><span>source • channel</span></div>
+ <div class="micro-arrow">→</div>
+ <div class="micro-node"><strong>Input quality</strong><span>authentic • clear</span></div>
+ <div class="micro-arrow">→</div>
+ <div class="micro-node"><strong>Handling + outcome</strong><span>AI • review • sales</span></div>
+ <div class="micro-arrow">↺</div>
+ <div class="micro-node improve-focus"><strong>IMPROVE</strong><span>customer journey • forms • campaign targeting<br>sender classification • CRM rules • understanding + qualification</span></div>
+ </div>
+
+ <div class="takeaways">
+ <div class="takeaway"><strong>Visibility = control</strong>Every decision and outcome is auditable.</div>
+ <div class="takeaway"><strong>Overrides = learning</strong>Human corrections improve future handling.</div>
+ <div class="takeaway"><strong>Marketing learns too</strong>Measure quality, not just lead volume.</div>
+ <div class="takeaway"><strong>Autonomy is earned</strong>Expand only when missed opportunities stay acceptable.</div>
+ </div>
+
+ <div class="conclusion">
+ <div class="tag">Conclusion • rollout</div>
+ <h3>Roll out in three steps</h3>
+ <div class="rollout-steps">
+ <div class="roll-step"><div class="n">Step 1</div><strong>Workflow-first</strong><span>Capture immediate routine-work savings.</span></div>
+ <div class="roll-step"><div class="n">Step 2</div><strong>AI-assisted</strong><span>AI prepares; people still control communication.</span></div>
+ <div class="roll-step"><div class="n">Step 3</div><strong>Selective AI autonomy</strong><span>Automate only cases that prove safe.</span></div>
+ </div>
+ <div class="callout"><strong>Bottom line:</strong> shift people away from repetitive tasks and toward valuable sales, client relationships and commercial follow-up — while giving up only as much autonomy as management chooses.</div>
+ </div>
+</section>
+
+<section id="annex" class="section">
+ <details class="optional">
+ <summary>Optional annex • Replace planning assumptions with actual HubSpot costs</summary>
+ <div class="optional-body">
+
+  <div class="annex-note">
+    <strong>How this works:</strong> only <strong>incremental</strong> project costs affect the ROI calculation.
+    Current HubSpot spend and seat count are baseline information, so changing them does not reduce the modeled gain.
+    Credits, add-ons, implementation cost, evaluation period and scenario usage assumptions update the calculations immediately.
+  </div>
+
+  <div class="input-grid">
+   <div class="input-box"><label>Current HubSpot monthly spend (€) — sunk baseline</label><input id="hubCurrentSpend" type="number" min="0" step="50" value="0"></div>
+   <div class="input-box"><label>Current paid HubSpot seats — informational</label><input id="hubSeats" type="number" min="0" step="1" value="7"></div>
+   <div class="input-box"><label>Included AI credits / month</label><input id="hubIncludedCredits" type="number" min="0" step="100" value="3000"></div>
+   <div class="input-box"><label>Price per extra credit (€ equivalent)</label><input id="hubCreditPrice" type="number" min="0" step="0.001" value="0.01"></div>
+   <div class="input-box"><label>Other new monthly add-ons (€)</label><input id="hubAddonCost" type="number" min="0" step="25" value="0"></div>
+   <div class="input-box"><label>One-time implementation (€)</label><input id="hubImplementation" type="number" min="0" step="100" value="0"></div>
+   <div class="input-box"><label>Evaluation period (months)</label><input id="hubMonths" type="number" min="1" max="60" step="1" value="12"></div>
+   <div class="input-box"><label>Workflow-first credits / communication</label><input id="wfCreditsPerComm" type="number" min="0" step="1" value="0"></div>
+   <div class="input-box"><label>AI-assisted credits / communication</label><input id="assistCreditsPerComm" type="number" min="0" step="1" value="30"></div>
+   <div class="input-box"><label>Selective AI credits / communication</label><input id="selectiveCreditsPerComm" type="number" min="0" step="1" value="40"></div>
+  </div>
+
+  <div class="metric-row" style="margin-top:10px">
+   <div class="metric"><div class="tag">HubSpot now</div><div class="v" id="currentHubSpendOut">€0</div><div class="l" id="currentHubSpendLegend">7 paid seats • sunk baseline</div></div>
+   <div class="metric"><div class="tag">Included credits</div><div class="v" id="includedCreditsOut">3,000</div><div class="l" id="includedCreditsLegend">applied before extra-credit cost</div></div>
+   <div class="metric"><div class="tag">Evaluation period</div><div class="v" id="periodOut">12 mo</div><div class="l" id="periodLegend">€0 one-time implementation</div></div>
+  </div>
+
+  <div class="tag" style="margin-top:14px">Live scenario calculation</div>
+  <div class="annex-scenarios">
+
+   <div class="annex-scenario">
+    <h4>Workflow-first</h4>
+    <div class="annex-line"><span>Credits required</span><strong id="wfCreditsRequiredOut">0</strong></div>
+    <div class="annex-line"><span>Extra credits billed</span><strong id="wfExtraCreditsOut">0</strong></div>
+    <div class="annex-line"><span>New monthly cost</span><strong id="wfMonthlyCostOut">€0</strong></div>
+    <div class="annex-line"><span>Net monthly gain</span><strong id="wfMonthlyNetOut">€1,575</strong></div>
+    <div class="annex-period"><div class="small" id="wfPeriodLabel">Net over 12 months</div><div class="big" id="wfPeriodNetOut">€18,900</div></div>
+   </div>
+
+   <div class="annex-scenario">
+    <h4>AI-assisted</h4>
+    <div class="annex-line"><span>Credits required</span><strong id="assistCreditsRequiredOut">45,000</strong></div>
+    <div class="annex-line"><span>Extra credits billed</span><strong id="assistExtraCreditsOut">42,000</strong></div>
+    <div class="annex-line"><span>New monthly cost</span><strong id="assistMonthlyCostOut">€420</strong></div>
+    <div class="annex-line"><span>Net monthly gain</span><strong id="assistMonthlyNetOut">€2,468</strong></div>
+    <div class="annex-period"><div class="small" id="assistPeriodLabel">Net over 12 months</div><div class="big" id="assistPeriodNetOut">€29,610</div></div>
+   </div>
+
+   <div class="annex-scenario">
+    <h4>Selective AI autonomy</h4>
+    <div class="annex-line"><span>Credits required</span><strong id="selectiveCreditsRequiredOut">60,000</strong></div>
+    <div class="annex-line"><span>Extra credits billed</span><strong id="selectiveExtraCreditsOut">57,000</strong></div>
+    <div class="annex-line"><span>New monthly cost</span><strong id="selectiveMonthlyCostOut">€570</strong></div>
+    <div class="annex-line"><span>Net monthly gain</span><strong id="selectiveMonthlyNetOut">€3,368</strong></div>
+    <div class="annex-period"><div class="small" id="selectivePeriodLabel">Net over 12 months</div><div class="big" id="selectivePeriodNetOut">€40,410</div></div>
+   </div>
+
+  </div>
+
+  <div class="small" style="margin-top:9px">
+    The three scenarios are alternatives, so the included monthly credit allowance is applied separately to each scenario.
+    Released capacity is not automatically cash saved; it becomes cash saving only if staffing cost is actually reduced.
+  </div>
+
+ </div>
+ </details>
+</section>
+
+<div class="sticky">
+ <a href="#proposal">3 stages</a>
+ <a href="#economics">Economics</a>
+ <a href="#operating-model">Operating model</a>
+ <a href="#annex">Cost annex</a>
+</div>
+</main>
+
+<script src="app.js" defer></script>
+</body>
+</html>
